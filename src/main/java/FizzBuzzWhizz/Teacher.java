@@ -2,16 +2,16 @@ package FizzBuzzWhizz;
 
 public class Teacher {
 
-  private int fistNum;
+  private int fristNum;
   private int secondNum;
   private int thirdNum;
-  private String fistString;
+  private String fristString;
   private String secondString;
   private String thirdString;
 
 
-  public String getFistString() {
-    return fistString;
+  public String getFristString() {
+    return fristString;
   }
 
   public String getSecondString() {
@@ -24,28 +24,28 @@ public class Teacher {
 
   public Teacher(int fistNum, int secondNum, int thirdNum, String fistString,
       String secondString, String thirdString) {
-    this.fistNum = fistNum;
+    this.fristNum = fistNum;
     this.secondNum = secondNum;
     this.thirdNum = thirdNum;
-    this.fistString = fistString;
+    this.fristString = fistString;
     this.secondString = secondString;
     this.thirdString = thirdString;
   }
 
   public String ruleResult(int nums) {
-    if (Integer.toString(nums).indexOf(Integer.toString(fistNum)) >= 0) {
-      return fistString;
+    if (Integer.toString(nums).indexOf(Integer.toString(fristNum)) >= 0) {
+      return fristString;
     } else {
-      if (nums % fistNum == 0 && nums % secondNum == 0 && nums % thirdNum == 0) {
-        return fistString + secondString + thirdString;
-      } else if (nums % fistNum == 0 && nums % secondNum == 0) {
-        return fistString + secondString;
-      } else if (nums % fistNum == 0 && nums % thirdNum == 0) {
-        return fistString + thirdString;
+      if (nums % fristNum == 0 && nums % secondNum == 0 && nums % thirdNum == 0) {
+        return fristString + secondString + thirdString;
+      } else if (nums % fristNum == 0 && nums % secondNum == 0) {
+        return fristString + secondString;
+      } else if (nums % fristNum == 0 && nums % thirdNum == 0) {
+        return fristString + thirdString;
       } else if (nums % secondNum == 0 && nums % thirdNum == 0) {
         return secondString + thirdString;
-      } else if (nums % fistNum == 0) {
-        return fistString;
+      } else if (nums % fristNum == 0) {
+        return fristString;
       } else if (nums % secondNum == 0) {
         return secondString;
       } else if (nums % thirdNum == 0) {

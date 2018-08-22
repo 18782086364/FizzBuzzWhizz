@@ -17,7 +17,7 @@ public class StudentTest {
 
         // then
 
-        assertThat(student.say()).isEqualTo(rule.getFistString());
+        assertThat(student.say()).isEqualTo(rule.getFristString());
     }
     @Test
     public void should_10_to_buzz() {
@@ -51,7 +51,7 @@ public class StudentTest {
 
         // then
 
-        assertThat(student.say()).isEqualTo(rule.getFistString());
+        assertThat(student.say()).isEqualTo(rule.getFristString());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class StudentTest {
 
         // then
 
-        assertThat(student.say()).isEqualTo(rule.getFistString()+rule.getSecondString());
+        assertThat(student.say()).isEqualTo(rule.getFristString()+rule.getSecondString());
     }
 
     @Test
@@ -76,7 +76,7 @@ public class StudentTest {
 
         // then
 
-        assertThat(student.say()).isEqualTo(rule.getFistString()+rule.getThirdString());
+        assertThat(student.say()).isEqualTo(rule.getFristString()+rule.getThirdString());
     }
 
     @Test
