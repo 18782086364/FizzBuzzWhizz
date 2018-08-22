@@ -3,6 +3,8 @@ package FizzBuzzWhizz;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import FizzBuzzWhizz.entity.Student;
+import FizzBuzzWhizz.entity.Teacher;
 import org.junit.Test;
 
 
