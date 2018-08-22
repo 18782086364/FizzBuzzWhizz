@@ -12,14 +12,15 @@ public class RuleEngine {
     public RuleEngine(Word word) {
         this.word = word;
         rules.add(new ContainRule());
-        rules.add(new MultipleRule());
         rules.add(new CommonMultipleRule());
+        rules.add(new MultipleRule());
     }
 
     public String getResult(int position) {
         for (Rule rule : rules) {
             String result = rule.getResultByPosition(position, word);
             if (rule.isApplicable()) {
+                rule.clearApplicable();
                 return result;
             }
         }

@@ -6,4 +6,6 @@ public interface Rule {
     String getResultByPosition(int position, Word word);
 
     Boolean isApplicable();
+
+    void clearApplicable();
 }

@@ -25,4 +25,9 @@ public class MultipleRule implements Rule {
     public Boolean isApplicable() {
         return this.applicable;
     }
+
+    @Override
+    public void clearApplicable() {
+        applicable = false;
+    }
 }

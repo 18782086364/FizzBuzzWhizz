@@ -8,7 +8,7 @@ public class ContainRule implements Rule {
     @Override
     public String getResultByPosition(int position, Word word) {
         String result = String.valueOf(position);
-        if (Integer.toString(position).indexOf(word.getFristString())>=0) {
+        if (String.valueOf(position).contains(String.valueOf(word.getFristNum()))) {
             result = word.getFristString();
             applicable = true;
         }
@@ -18,5 +18,9 @@ public class ContainRule implements Rule {
     @Override
     public Boolean isApplicable() {
         return this.applicable;
+    }
+    @Override
+    public void clearApplicable() {
+        applicable = false;
     }
 }

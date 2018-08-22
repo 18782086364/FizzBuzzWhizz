@@ -8,25 +8,30 @@ public class CommonMultipleRule implements Rule {
 
     @Override
     public String getResultByPosition(int position, Word word) {
-        StringBuffer result = new StringBuffer();
+        String result = String.valueOf(position);
         if (position % word.getFristNum() == 0 && position % word.getThirdNum() == 0 && position % word.getSecondNum() == 0) {
-            result.append(word.getFristNum()).append(word.getSecondNum()).append(word.getThirdString());
+            result = word.getFristString() + word.getSecondString() + word.getThirdString();
             applicable = true;
         } else if (position % word.getFristNum() == 0 && position % word.getSecondNum() == 0) {
-            result.append(word.getFristNum()).append(word.getSecondNum());
+            result = word.getFristString() + word.getSecondString();
             applicable = true;
         } else if (position % word.getFristNum() == 0 && position % word.getThirdNum() == 0) {
-            result.append(word.getFristNum()).append(word.getThirdString());
+            result = word.getFristString() + word.getThirdString();
             applicable = true;
         } else if (position % word.getSecondNum() == 0 && position % word.getThirdNum() == 0) {
-            result.append(word.getSecondString()).append(word.getThirdString());
+            result = word.getSecondString() + word.getThirdString();
             applicable = true;
         }
-        return result.toString();
+        return result;
     }
 
     @Override
     public Boolean isApplicable() {
         return this.applicable;
+    }
+
+    @Override
+    public void clearApplicable() {
+        applicable = false;
     }
 }
