@@ -7,9 +7,9 @@ blue='\033[0;34m'
 NC='\033[0m' # No colors
 
 # Regex & Usage
-commit_regex="^(\[((FizzBuzzWhizz-[0-9]+))\]\[\S+(\s\&\s\S+)*\]|merge)\s"
+commit_regex="^(\[((fizzBuzzWhizz-[0-9]+))\]\[\S+(\s\&\s\S+)*\]|merge)\s"
 error_message="Aborting commit. Commit message must start with ${yellow}[LENGTH-#ID][YOUR NAME]."
-usage="[FizzBuzzWhizz-#ID][YOUR NAME] Commit Message."
+usage="[fizzBuzzWhizz-#ID][YOUR NAME] Commit Message."
 
 if ! grep -qE "$commit_regex" "$1"; then
   printf "${red}$error_message\n"
